@@ -20,6 +20,7 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "express": "^4.15.2",
     "google-auth-library": "^0.10.0",
     "googleapis": "^18.0.0",
     "material-ui": "^0.16.5",

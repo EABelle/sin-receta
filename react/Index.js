@@ -69,7 +69,7 @@ export default class Index extends React.Component {
               position: 'relative',
               margin: '10 auto'
           }}>
-            <a href="http://localhost:3000/download/sin-receta-momento-de-furia.zip">
+            <a href="http://localhost:3001/download/sin-receta-momento-de-furia.zip">
             <FlatButton
               label="DESCARGAR DISCO"
               primary={true}
