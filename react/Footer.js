@@ -8,10 +8,10 @@ const style = {
 export default class Footer extends React.Component {
   render() {
     return(
-      <div className="footer" style={{position: 'relative'}}>
+      <div className="footer" style={{position: 'relative', marginBottom: -20}}>
       	<div className="container">
       		<div className="footer-bottom">
-      		<div className="copy-right">
+      		<div className="copy-right" style={{fontFamily: 'roboto'}}>
       			<p>© 2011 - 2016 Sin Receta © Todos los derechos reservados.</p>
       			<ul className="social">
               <li>
@@ -43,6 +43,7 @@ export default class Footer extends React.Component {
       		</div>
           </div>
         </div>
+        <div style ={{textAlign: 'center', color:'white', fontFamily: 'roboto', marginTop: 30}}>Developed by EABelle</div>
       </div>
     )
   }

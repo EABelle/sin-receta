@@ -164,8 +164,8 @@ const MOMENTO = [
 export default class Albums extends React.Component {
   render() {
     return(
-      <div>
-        <h3 style={{textAlign: 'center', color: 'white', marginTop: '5%', position:'relative'}}>
+      <div style={{paddingBottom: 30}}>
+        <h3 style={{textAlign: 'center', color: 'white', marginTop: '5%', position:'relative', fontFamily: 'helvetica'}}>
           Discos:
         </h3>
         <div style={{color: 'white', margin: "0 auto", width: "75%", marginTop: 30, marginBottom: 30, position:'relative'}}>

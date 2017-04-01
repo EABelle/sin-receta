@@ -9,7 +9,7 @@ export default class Index extends React.Component {
   render() {
     return(
       <div style={{marginTop: '20%', paddingBottom: '20%', display: 'block', overflow: 'hidden'}}>
-        <h3 style={{textAlign: 'center', color: 'white'}}>
+        <h3 style={{textAlign: 'center', color: 'white', fontFamily: 'helvetica'}}>
           Sitios:
         </h3>
         <div style ={{
