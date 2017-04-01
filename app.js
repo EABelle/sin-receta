@@ -1,21 +1,26 @@
 import React from 'react';
 import Footer from './react/Footer'
 import Banner from './react/Banner'
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
 export default class App extends React.Component {
   render() {
     return(
-        <MuiThemeProvider>
-          <div style={{
-              backgroundColor: 'black'
-            }}>
-            <img src="./images/momento/Tapa.jpg" style={{width: '100%', position: 'fixed', zIndex: 0}} />
-            <Banner>
+      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+          <div style={{backgroundColor: 'black',}}>
+            <Banner />
+            <div style={{
+                backgroundColor: 'black',
+                backgroundImage: 'url("./images/momento/fondo.jpg")',
+                backgroundSize: '100%',
+              }}>
+              <div style={{display: 'block', height: 50}} />
               {this.props.children}
-            </Banner>
+            </div>
             <Footer />
           </div>
         </MuiThemeProvider>

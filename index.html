@@ -17,7 +17,7 @@
     <!--Google Fonts-->
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" style="background-color: black"></div>
     <script src="bundle.js"></script>
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.
@@ -32,8 +32,6 @@
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '360',
-          width: '640',
           videoId: 'n1twQOqkf-s',
           events: {
             'onReady': onPlayerReady,

@@ -25,6 +25,7 @@
     "material-ui": "^0.16.5",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-resize-to-aspect-ratio": "^1.0.7",
     "react-router": "^2.8.1",
     "react-tap-event-plugin": "^2.0.1"
   }

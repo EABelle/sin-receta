@@ -8,10 +8,10 @@ const style = {
 export default class Footer extends React.Component {
   render() {
     return(
-      <div className="footer" style={{zIndex: 99}}>
-      	<div className="container" style={{zIndex: 100}}>
-      		<div className="footer-bottom" style={{zIndex: 101}}>
-      		<div className="copy-right" style={{zIndex: 102}}>
+      <div className="footer" style={{position: 'relative'}}>
+      	<div className="container">
+      		<div className="footer-bottom">
+      		<div className="copy-right">
       			<p>© 2011 - 2016 Sin Receta © Todos los derechos reservados.</p>
       			<ul className="social">
               <li>

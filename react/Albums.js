@@ -6,9 +6,9 @@ const style = {
   marginLeft: 5
 }
 
-function getDisco(imageUrl){
+function getDisco(imageUrl, link){
   return(
-    <div style={{display: 'inline-block', marginLeft: 30, marginRight: 30}}>
+    <div style={{display: 'block', margin: "0 auto"}}>
       <div style={{
           display: 'block',
           textAlign: 'center',
@@ -23,10 +23,12 @@ function getDisco(imageUrl){
           position: 'relative',
           margin: '10 auto'
       }}>
+        <a href={link}>
         <FlatButton
           label="DESCARGAR DISCO"
           primary={true}
           />
+        </a>
       </div>
     </div>
 
@@ -162,11 +164,16 @@ const MOMENTO = [
 export default class Albums extends React.Component {
   render() {
     return(
-      <div style={{marginTop: 250, color: 'white'}}>
-        {getDisco("../images/momento/MdF-logo.png")}
-        {tablaDisco(NOTICIA, "Noticia Oficial")}
-        {getDisco("../images/momento/MdF-logo.png")}
-        {tablaDisco(MOMENTO, "Momento de Furia")}
+      <div>
+        <h3 style={{textAlign: 'center', color: 'white', marginTop: '5%', position:'relative'}}>
+          Discos:
+        </h3>
+        <div style={{color: 'white', margin: "0 auto", width: "75%", marginTop: 30, marginBottom: 30, position:'relative'}}>
+          {getDisco("../images/momento/momento-cover.jpg", "http://localhost:3000/download/sin-receta-momento-de-furia.zip")}
+          {tablaDisco(MOMENTO, "Momento de Furia")}
+          {getDisco("../images/momento/noticia-cover.jpg", "http://localhost:3000/download/sin-receta-noticia-oficial.zip")}
+          {tablaDisco(NOTICIA, "Noticia Oficial")}
+        </div>
       </div>
 
     )

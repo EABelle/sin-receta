@@ -8,7 +8,7 @@ const style = {
 export default class Index extends React.Component {
   render() {
     return(
-      <div style = {{marginTop: 250}}>
+      <div style={{marginTop: '20%', paddingBottom: '20%', display: 'block', overflow: 'hidden'}}>
         <h3 style={{textAlign: 'center', color: 'white'}}>
           Sitios:
         </h3>
