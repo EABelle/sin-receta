@@ -15,7 +15,6 @@ function tablaFechas(fechas){
         <thead>
           <tr>
             <th>Fecha</th>
-            <th>Horario</th>
             <th>Lugar</th>
             <th>Ciudad</th>
             <th>Detalles</th>
@@ -25,9 +24,8 @@ function tablaFechas(fechas){
           {
             fechas.map((fecha)=>{
               return(
-                <tr>
+                <tr key={fecha.fecha}>
                   <th scope="row">{fecha.fecha}</th>
-                  <td>{fecha.horario}</td>
                   <td>{fecha.lugar}</td>
                   <td>{fecha.ciudad}</td>
                   <td>{fecha.detalles}</td>
@@ -43,8 +41,7 @@ function tablaFechas(fechas){
 
 const FECHAS = [
   {
-    fecha: "Sáb 29/4",
-    horario: "21:00 hs",
+    fecha: "Sáb 29/4 - 21:00 hs",
     lugar: "Teatro Verdi - Av. Alte. Brown 726",
     ciudad: "CABA",
     detalles: <a
@@ -56,28 +53,24 @@ const FECHAS = [
   },
   {
     fecha: "Sáb 17/6",
-    horario: "-",
     lugar: "Teatro Verdi - Av. Alte. Brown 726",
     ciudad: "CABA",
     detalles: "-",
   },
   {
     fecha: "Sáb 12/8",
-    horario: "-",
     lugar: "Teatro Verdi - Av. Alte. Brown 726",
     ciudad: "CABA",
     detalles: "-",
   },
   {
     fecha: "Sáb 14/10",
-    horario: "-",
     lugar: "Teatro Verdi - Av. Alte. Brown 726",
     ciudad: "CABA",
     detalles: "-",
   },
   {
     fecha: "Sáb 16/12",
-    horario: "-",
     lugar: "Teatro Verdi - Av. Alte. Brown 726",
     ciudad: "CABA",
     detalles: "-",
@@ -99,7 +92,7 @@ export default class Albums extends React.Component {
             Próximas Fechas:
           </h3>
         </MediaQuery>
-        <div style={{color: 'white', margin: "0 auto", width: "75%", marginTop: 30, marginBottom: 30, position:'relative'}}>
+        <div style={{color: 'white', margin: "0 auto", width: "75%", marginTop: 30, marginBottom: 250, position:'relative'}}>
           {tablaFechas(FECHAS)}
         </div>
       </div>

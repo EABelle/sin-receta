@@ -38,10 +38,10 @@ export default class Banner extends React.Component {
 
             <ul className="res">
               <li><a href="/"><span className="glyphicon glyphicon-home" aria-hidden="true"> </span></a></li>
-              <li><Link to="albums">Discos</Link></li>
-              <li><a href="https://www.youtube.com/user/7sinreceta/videos" target="_blank">Videoclips</a></li>
-              <li><Link to="dates">Fechas</Link></li>
-              <li className="nav-line"><Link to="contact">Contacto</Link></li>
+              <li><Link to="albums" style={{fontFamily: 'Helvetica'}}>Discos</Link></li>
+              <li><a href="https://www.youtube.com/user/7sinreceta/videos" target="_blank" style={{fontFamily: 'Helvetica'}}>Videoclips</a></li>
+            <li><Link to="dates" style={{fontFamily: 'Helvetica'}}>Fechas</Link></li>
+              <li className="nav-line"><Link to="contact" style={{fontFamily: 'Helvetica'}}>Contacto</Link></li>
             </ul>
           </div>
           <div className="clearfix"> </div>

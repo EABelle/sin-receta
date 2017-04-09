@@ -52,7 +52,7 @@ function tablaDisco(disc, name){
           {
             disc.map((song)=>{
               return(
-                <tr>
+                <tr key={song.name}>
                   <th scope="row">{song.id}</th>
                   <td>{song.name}</td>
                 </tr>
