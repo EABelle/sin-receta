@@ -80,7 +80,7 @@ const FECHAS = [
     horario: "-",
     lugar: "Teatro Verdi - Av. Alte. Brown 726",
     ciudad: "CABA",
-    detalles: "",
+    detalles: "-",
   },
 
 ]

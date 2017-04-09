@@ -37,11 +37,6 @@ export default class Footer extends React.Component {
                 <img src="../images/youtube.png" width={24} style={style}></img>
               </a>
             </li>
-            <li>
-              <a href="mailto:sinrecetaoficial@gmail.com">
-                <img src="../images/gmail.png" width={24} style={style}></img>
-              </a>
-            </li>
       			</ul>
       		</div>
           </div>
