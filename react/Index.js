@@ -35,13 +35,14 @@ export default class Index extends React.Component {
             position: 'relative',
             margin: '0 auto',
             marginTop: "5%",
-            width: "50%",
-            height: "56.25%",
             maxWidth: 800,
             maxHeight:450,
           }}/>
         </Resize>
-        <div style = {{position:'relative', margin:'0 auto', marginTop: '-24%', paddingBottom: '5%', color: 'white', fontFamily: 'roboto'}}>
+        <div
+          className="nosotros"
+          style = {{position:'relative', color: 'white', fontFamily: 'roboto'}}
+        >
           <p style = {{textAlign: 'center', margin:'0 auto', fontWeight: 'bold', marginBottom: 2}}>Sin Receta somos:</p>
           <p style = {{textAlign: 'center', margin:'0 auto'}}>Fernando Luis Menéndez Pérez - Voz</p>
           <p style = {{textAlign: 'center', margin:'0 auto'}}>Franco "Bilo" Menéndez - Guitarra y Coros</p>

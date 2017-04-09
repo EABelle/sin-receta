@@ -1,5 +1,7 @@
 import React from 'react';
 import FlatButton from 'material-ui/FlatButton';
+var MediaQuery = require('react-responsive');
+
 var host = "31.220.58.84"
 
 const style = {
@@ -166,9 +168,16 @@ export default class Albums extends React.Component {
   render() {
     return(
       <div style={{paddingBottom: 30}}>
-        <h3 style={{textAlign: 'center', color: 'white', marginTop: '5%', position:'relative', fontFamily: 'helvetica'}}>
-          Discos:
-        </h3>
+        <MediaQuery query='(max-width: 768px)'>
+          <h4 style={{textAlign: 'center', color: 'white', marginTop: '10%', position:'relative', fontFamily: 'helvetica'}}>
+            Discos:
+          </h4>
+        </MediaQuery>
+        <MediaQuery query='(min-width: 769px)'>
+          <h3 style={{textAlign: 'center', color: 'white', marginTop: '5%', position:'relative', fontFamily: 'helvetica'}}>
+            Discos:
+          </h3>
+        </MediaQuery>
         <div style={{color: 'white', margin: "0 auto", width: "75%", marginTop: 30, marginBottom: 30, position:'relative'}}>
           {getDisco("../images/momento/momento-cover.jpg", "http://"+host+":3001/download/sin-receta-momento-de-furia.zip")}
           {tablaDisco(MOMENTO, "Momento de Furia")}

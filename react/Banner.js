@@ -15,7 +15,6 @@ export default class Banner extends React.Component {
   }
 
   render() {
-    console.log(this.props.children)
     return(
       <div>
         <div className="header" style={{position: 'fixed', width: '100%', zIndex:1000}}>
@@ -41,6 +40,7 @@ export default class Banner extends React.Component {
               <li><a href="/"><span className="glyphicon glyphicon-home" aria-hidden="true"> </span></a></li>
               <li><Link to="albums">Discos</Link></li>
               <li><a href="https://www.youtube.com/user/7sinreceta/videos" target="_blank">Videoclips</a></li>
+              <li><Link to="dates">Fechas</Link></li>
               <li className="nav-line"><Link to="contact">Contacto</Link></li>
             </ul>
           </div>
@@ -55,10 +55,40 @@ export default class Banner extends React.Component {
           onRequestChange={(open)=>this.setState({drawerOpen: open})}
 
         >
-          <MenuItem onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})} style={{color:'red'}}><a href="/">Home</a></MenuItem>
-          <MenuItem onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})}><Link to="albums">Discos</Link></MenuItem>
-          <MenuItem onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})}><a href="https://www.youtube.com/user/7sinreceta/videos" target="_blank">Videoclips</a></MenuItem>
-          <MenuItem onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})} className="nav-line"><Link to="contact">Contacto</Link></MenuItem>
+          <img src="images/logo.png" width="64" style={{position: 'relative', display: 'block'}}/>
+          <a href="/">
+            <MenuItem
+              onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})}
+              style={{color:'darkRed', fontWeight: 'bold', fontFamily: 'Helvetica',position: 'relative', display: 'block'}}
+            >Home
+            </MenuItem>
+          </a>
+          <Link to="albums">
+            <MenuItem
+              style={{color:'darkRed', fontWeight: 'bold', fontFamily: 'Helvetica'}}
+              onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})}>
+              Discos
+            </MenuItem>
+          </Link>
+          <a href="https://www.youtube.com/user/7sinreceta/videos" target="_blank">
+            <MenuItem
+              style={{color:'darkRed', fontWeight: 'bold', fontFamily: 'Helvetica'}}
+              onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})}>
+              Videoclips
+            </MenuItem>
+          </a>
+          <Link to="dates" >
+            <MenuItem style={{color:'darkRed', fontWeight: 'bold', fontFamily: 'Helvetica'}}
+              onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})} className="nav-line">
+              Fechas
+            </MenuItem>
+          </Link>
+          <Link to="contact" >
+            <MenuItem style={{color:'darkRed', fontWeight: 'bold', fontFamily: 'Helvetica'}}
+              onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})} className="nav-line">
+              Contacto
+            </MenuItem>
+          </Link>
         </Drawer>
       </div>
 

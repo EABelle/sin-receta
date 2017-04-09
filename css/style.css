@@ -1958,3 +1958,27 @@ h3.typo1 {
   right: 0;
   bottom: 0;
 }
+
+.nosotros{
+  margin: 0 auto;
+  margin-top: -24%;
+  padding-bottom: 5%;
+}
+
+@media(max-width:768px){
+  #player {
+    width: 80%;
+    height: 90%;
+  }
+  .nosotros{
+    margin: 0 auto;
+    margin-top: 0;
+    padding-bottom: 5%;
+  }
+}
+
+@media(min-width:769px){
+#player {
+  width: 50%;
+  height: 56.25%;
+}

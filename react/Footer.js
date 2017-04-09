@@ -5,6 +5,14 @@ const style = {
   marginLeft: 5
 }
 
+/* SPOTIFY
+<li>
+  <a href="#">
+    <img src="../images/spotify.png" width={24} style={style}></img>
+  </a>
+</li>
+*/
+
 export default class Footer extends React.Component {
   render() {
     return(
@@ -25,11 +33,6 @@ export default class Footer extends React.Component {
               </a>
               </li>
               <li>
-              <a href="#">
-                <img src="../images/spotify.png" width={24} style={style}></img>
-              </a>
-              </li>
-              <li>
               <a href="https://www.youtube.com/user/7sinreceta">
                 <img src="../images/youtube.png" width={24} style={style}></img>
               </a>
@@ -43,7 +46,8 @@ export default class Footer extends React.Component {
       		</div>
           </div>
         </div>
-        <div style ={{textAlign: 'center', color:'white', fontFamily: 'roboto', marginTop: 30}}>Developed by EABelle</div>
+        <div style ={{textAlign: 'center', color:'white', fontFamily: 'roboto', marginTop: 15}}>sinrecetaoficial@gmail.com </div>
+      <div style ={{textAlign: 'center', color:'white', fontFamily: 'roboto', marginTop: 30}}>Developed by EABelle</div>
       </div>
     )
   }

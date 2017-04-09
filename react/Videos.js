@@ -135,7 +135,6 @@ export default class Videos extends React.Component {
         <img src={videothumbnail} />
       )
     })
-    console.log(videos)
     return(
       <div style={styles.root}>
         <p>Canal de youtube</p>
