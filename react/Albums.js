@@ -1,5 +1,6 @@
 import React from 'react';
 import FlatButton from 'material-ui/FlatButton';
+var host = "31.220.58.84"
 
 const style = {
   marginRight:5,
@@ -169,9 +170,9 @@ export default class Albums extends React.Component {
           Discos:
         </h3>
         <div style={{color: 'white', margin: "0 auto", width: "75%", marginTop: 30, marginBottom: 30, position:'relative'}}>
-          {getDisco("../images/momento/momento-cover.jpg", "http://localhost:3001/download/sin-receta-momento-de-furia.zip")}
+          {getDisco("../images/momento/momento-cover.jpg", "http://"+host+":3001/download/sin-receta-momento-de-furia.zip")}
           {tablaDisco(MOMENTO, "Momento de Furia")}
-          {getDisco("../images/momento/noticia-cover.jpg", "http://localhost:3001/download/sin-receta-noticia-oficial.zip")}
+          {getDisco("../images/momento/noticia-cover.jpg", "http://"+host+":3001/download/sin-receta-noticia-oficial.zip")}
           {tablaDisco(NOTICIA, "Noticia Oficial")}
         </div>
       </div>

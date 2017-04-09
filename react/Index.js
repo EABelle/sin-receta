@@ -4,7 +4,7 @@ import FlatButton from 'material-ui/FlatButton';
 import Resize from 'react-resize-to-aspect-ratio';
 import IconButton from 'material-ui/IconButton';
 import ContentClear from 'material-ui/svg-icons/content/clear';
-
+var host = "31.220.58.84"
 
 export default class Index extends React.Component {
 
@@ -82,7 +82,7 @@ export default class Index extends React.Component {
               position: 'relative',
               margin: '10 auto'
           }}>
-            <a href="http://localhost:3001/download/sin-receta-momento-de-furia.zip">
+            <a href={"http://"+host+":3001/download/sin-receta-momento-de-furia.zip"}>
             <FlatButton
               label="DESCARGAR DISCO"
               primary={true}

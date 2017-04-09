@@ -20,6 +20,7 @@ module.exports = {
     historyApiFallback: true,
     contentBase: './',
     hot: true,
-    port: process.env.PORT || 8080
+    port: process.env.PORT || 80,
+    host: "0.0.0.0"
   },
 };
