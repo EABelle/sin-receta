@@ -1,14 +1,9 @@
 import React from 'react';
 
-const style = {
-  marginRight:5,
-  marginLeft: 5
-}
-
 /* SPOTIFY
 <li>
   <a href="#">
-    <img src="../images/spotify.png" width={24} style={style}></img>
+    <img src="../images/spotify.png" width={24} className="footerItem"></img>
   </a>
 </li>
 */
@@ -16,33 +11,33 @@ const style = {
 export default class Footer extends React.Component {
   render() {
     return(
-      <div className="footer" style={{position: 'relative', marginBottom: -20}}>
+      <div className="footer" id="footerHead">
       	<div className="container">
       		<div className="footer-bottom">
-      		<div className="copy-right" style={{fontFamily: 'roboto'}}>
+      		<div className="copy-right roboto-family">
       			<p>© 2011 - 2016 Sin Receta © Todos los derechos reservados.</p>
       			<ul className="social">
               <li>
                 <a href="https://www.facebook.com/SinRecetaOficial">
-                  <img src="../images/facebook.png" width={24} style={style}></img>
+                  <img src="../images/facebook.png" width={24} className="footerItem"></img>
                 </a>
               </li>
               <li>
               <a href="https://www.instagram.com/sin.receta/">
-                <img src="../images/instagram.png" width={24} style={style}></img>
+                <img src="../images/instagram.png" width={24} className="footerItem"></img>
               </a>
               </li>
               <li>
               <a href="https://www.youtube.com/user/7sinreceta">
-                <img src="../images/youtube.png" width={24} style={style}></img>
+                <img src="../images/youtube.png" width={24} className="footerItem"></img>
               </a>
             </li>
       			</ul>
       		</div>
           </div>
         </div>
-        <div style ={{textAlign: 'center', color:'white', fontFamily: 'roboto', marginTop: 15}}>sinrecetaoficial@gmail.com </div>
-      <div style ={{textAlign: 'center', color:'white', fontFamily: 'roboto', marginTop: 30}}>Developed by EABelle</div>
+        <div className="footerFoot" id="footerMail">sinrecetaoficial@gmail.com </div>
+      <div className="footerFoot" id="footerSignature">Developed by EABelle</div>
       </div>
     )
   }

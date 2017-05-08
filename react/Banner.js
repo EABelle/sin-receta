@@ -4,7 +4,6 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 var MediaQuery = require('react-responsive');
 
-
 export default class Banner extends React.Component {
 
   constructor(){
@@ -17,7 +16,7 @@ export default class Banner extends React.Component {
   render() {
     return(
       <div>
-        <div className="header" style={{position: 'fixed', width: '100%', zIndex:1000}}>
+        <div className="header">
           <MediaQuery query='(min-width: 769px)'>
             <div className="logo">
               <h1><a href="index.html"><img src="images/logo.png" width="64"/></a></h1>
@@ -29,9 +28,9 @@ export default class Banner extends React.Component {
               src="images/icon.png"
               width="24"
               alt=""
-              style={{marginTop: 10, marginLeft: 10}}
+              id="menuIcon"
             />
-            <img src="images/logo.png" width="64" style={{float:'right'}}/>
+            <img src="images/logo.png" width="64" id="menuLogo"/>
           </MediaQuery>
 
           <div className="top-nav">

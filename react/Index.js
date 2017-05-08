@@ -4,7 +4,13 @@ import FlatButton from 'material-ui/FlatButton';
 import Resize from 'react-resize-to-aspect-ratio';
 import IconButton from 'material-ui/IconButton';
 import ContentClear from 'material-ui/svg-icons/content/clear';
-var host = "31.220.58.84"
+const DIALOG_BODY_STYLE = {
+  backgroundColor: 'black',
+  color: 'white',
+  border: 'solid 1px #1a0000',
+}
+var URLS = require('./const/links')
+var MDF_URL = URLS.mdf
 
 export default class Index extends React.Component {
 
@@ -20,70 +26,39 @@ export default class Index extends React.Component {
 
     return(
       <div>
-        <div style={{
-            display: 'block',
-            textAlign: 'center',
-            position: 'relative',
-            margin: '0 auto',
-            marginTop: "5%"
-          }}>
+        <div id="indexHead">
           <img src={"../images/momento/MdF-logo.png"} width={240} />
         </div>
         <Resize aspectRatio="16:9">
-          <div id="player" style={{
-            display:'block',
-            position: 'relative',
-            margin: '0 auto',
-            marginTop: "5%",
-            maxWidth: 800,
-            maxHeight:450,
-          }}/>
+          <div id="player" />
         </Resize>
-        <div
-          className="nosotros"
-          style = {{position:'relative', color: 'white', fontFamily: 'roboto'}}
-        >
-          <p style = {{textAlign: 'center', margin:'0 auto', fontWeight: 'bold', marginBottom: 2}}>Sin Receta somos:</p>
-          <p style = {{textAlign: 'center', margin:'0 auto'}}>Fernando Luis Menéndez Pérez - Voz</p>
-          <p style = {{textAlign: 'center', margin:'0 auto'}}>Franco "Bilo" Menéndez - Guitarra y Coros</p>
-          <p style = {{textAlign: 'center', margin:'0 auto'}}>Esteban Bellegarde - Guitarra</p>
-          <p style = {{textAlign: 'center', margin:'0 auto'}}>Gabriel de los Santos - Trompeta y Coros</p>
-          <p style = {{textAlign: 'center', margin:'0 auto'}}>Cristian Aguirre - Trombón y Coros</p>
-          <p style = {{textAlign: 'center', margin:'0 auto'}}>Guillermo "Gallo" Morana - Saxo</p>
-          <p style = {{textAlign: 'center', margin:'0 auto'}}>Daniel Viale - Bajo</p>
-          <p style = {{textAlign: 'center', margin:'0 auto'}}>Nahuel Zapata - Batería</p>
+        <div className="nosotros">
+          <p className="membersTitle">Sin Receta somos:</p>
+          <p className="memberName">Fernando Luis Menéndez Pérez - Voz</p>
+          <p className="memberName">Franco "Bilo" Menéndez - Guitarra y Coros</p>
+          <p className="memberName">>Esteban Bellegarde - Guitarra</p>
+          <p className="memberName">Gabriel de los Santos - Trompeta y Coros</p>
+          <p className="memberName">Cristian Aguirre - Trombón y Coros</p>
+          <p className="memberName">Guillermo "Gallo" Morana - Saxo</p>
+          <p className="memberName">Daniel Viale - Bajo</p>
+          <p className="memberName">Nahuel Zapata - Batería</p>
         </div>
         <Dialog
           modal={false}
           open={this.state.open}
           onRequestClose={handleClose}
-          bodyStyle={{
-            backgroundColor: 'black',
-            color: 'white',
-            border: 'solid 1px #1a0000',
-            backgroundImage: 'url("../images/momento/fondo-original.jpg")',
-          }}
+          bodyStyle={DIALOG_BODY_STYLE}
         >
-          <div style={{position: 'absolute', top: 0, right: 0, marginRight: 5, marginLeft: 5}}>
+          <div id="downloadDialogButton" >
             <IconButton onClick={handleClose}>
               <ContentClear color="white"/>
             </IconButton>
           </div>
-          <div style={{
-              display: 'block',
-              textAlign: 'center',
-              position: 'relative',
-              margin: '10 auto'
-            }}>
+          <div className="dialogItem">
             <img src="../images/momento/MdF-logo.png" width={240}/>
           </div>
-          <div style={{
-              display: 'block',
-              textAlign: 'center',
-              position: 'relative',
-              margin: '10 auto'
-          }}>
-            <a href={"http://"+host+":3001/download/sin-receta-momento-de-furia.zip"}>
+          <div className="dialogItem">
+            <a href={MDF_URL}>
             <FlatButton
               label="DESCARGAR DISCO"
               primary={true}

@@ -1,17 +1,11 @@
 import React from 'react';
 var MediaQuery = require('react-responsive');
-
 var host = "31.220.58.84"
-
-const style = {
-  marginRight:5,
-  marginLeft: 5
-}
 
 function tablaFechas(fechas){
   return(
     <div>
-      <table className="table" style={{fontFamily: 'roboto'}}>
+      <table className="table" id="datesTable" >
         <thead>
           <tr>
             <th>Fecha</th>
@@ -48,7 +42,7 @@ const FECHAS = [
       target="_blank"
       href = "https://www.facebook.com/events/1272262689555836/"
       >
-        <span style={{color: "darkRed"}}> IR AL EVENTO </span>
+        <span className="dateLink"> IR AL EVENTO </span>
     </a>,
   },
   {
@@ -81,18 +75,18 @@ const FECHAS = [
 export default class Albums extends React.Component {
   render() {
     return(
-      <div style={{paddingBottom: 30}}>
+      <div id="datesHead">
         <MediaQuery query='(max-width: 768px)'>
-          <h4 style={{textAlign: 'center', color: 'white', marginTop: '10%', position:'relative', fontFamily: 'helvetica'}}>
+          <h4 className="datesTitle" id="datesTitleMin">
             Próximas Fechas:
           </h4>
         </MediaQuery>
         <MediaQuery query='(min-width: 769px)'>
-          <h3 style={{textAlign: 'center', color: 'white', marginTop: '5%', position:'relative', fontFamily: 'helvetica'}}>
+          <h3 className="datesTitle" id="datesTitleMax">
             Próximas Fechas:
           </h3>
         </MediaQuery>
-        <div style={{color: 'white', margin: "0 auto", width: "75%", marginTop: 30, marginBottom: 250, position:'relative'}}>
+        <div id="datesTableHead">
           {tablaFechas(FECHAS)}
         </div>
       </div>

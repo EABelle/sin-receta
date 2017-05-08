@@ -1,0 +1,213 @@
+.discoContainer{
+  display: block;
+  margin: 0px auto;
+}
+
+.discoItemContainer{
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 10px auto;
+}
+
+.discoTapa{
+  border: solid white 1px;
+  background-color: black;
+}
+
+.discosTitle{
+  text-align: center;
+  color: white;
+  margin-top: 10%;
+  position: relative;
+  font-family: helvetica;
+}
+
+#discosTitleMin{
+  margin-top: 10%;
+}
+
+#discosTitleMax{
+  margin-top: 5%;
+}
+
+#discosTitleContainer{
+  padding-bottom: 30px;
+}
+
+#discosContainer{
+  color: white;
+  margin: 0px auto;
+  width: 75%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.header{
+  position: fixed;
+  width: 100%;
+  z-index: 1000
+}
+
+#menuIcon{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#menuLogo{
+  float: right;
+}
+
+.contactParagraph{
+  text-align: center;
+  color: white;
+  font-family: helvetica;
+}
+
+#contactHead {
+  margin-top: 20%;
+  padding-bottom: 20%;
+  display: block;
+  overflow: hidden;
+}
+
+#contactFoot {
+  margin-top: 20px;
+}
+
+.contactItem{
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contactBlocks{
+  display: block;
+  text-align: center;
+}
+
+.datesTitle{
+  text-align: center;
+  color: white;
+  margin-top: 10%;
+  position: relative;
+  font-family: helvetica;
+}
+
+#datesTitleMin{
+  margin-top: 5%;
+}
+
+#datesTitleMax{
+  margin-top: 10%;
+}
+
+#datesTableHead{
+  color: white;
+  margin: 0px auto;
+  width: 75%;
+  margin-top: 30px;
+  margin-bottom: 250px;
+  position: relative;
+}
+
+#datesHead{
+  padding-bottom: 30px;
+}
+
+#datesTable{
+  font-family: roboto;
+}
+
+.dateLink{
+  color: darkRed;
+}
+
+.footerFoot{
+  text-align: center;
+  color: white;
+  font-family: roboto;
+}
+
+#footerMail{
+  margin-top: 15px;
+}
+
+#footerSignature{
+  margin-top: 30px;
+}
+
+.footerItem{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#footerHead{
+  position: relative;
+  margin-bottom: -20px;
+}
+
+.roboto-family{
+  font-family: roboto;
+}
+
+.dialogItem{
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 10px auto;
+}
+
+.memberName{
+  text-align: center;
+  margin: 0px auto;
+}
+
+.membersTitle{
+  text-align: center;
+  margin: 0px auto;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+#player{
+  display: block;
+  position: relative;
+  margin: 0px auto;
+  margin-top: 5%;
+  max-width: 800px;
+  max-height: 450px;
+}
+
+#player{
+  display: block;
+  position: relative;
+  margin: 0px auto;
+  margin-top: 5%;
+  max-width: 800px;
+  max-height: 450px;
+}
+
+#indexHead{
+  display: block;
+  position: relative;
+  margin: 0px auto;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.nosotros{
+  position: relative;
+  color: white;
+  font-family: roboto;
+}
+
+#downloadDialogButton{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-right: 5px; 
+  margin-left: 5px;
+}

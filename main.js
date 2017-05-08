@@ -1,5 +1,4 @@
 import App from './app.js';
-import Videos from './react/Videos.js';
 import Index from './react/Index.js';
 import Contact from './react/Contact.js';
 import Albums from './react/Albums.js';
@@ -13,7 +12,6 @@ ReactDOM.render((
     <Route path="/" component={App}>
       <IndexRedirect to="/index" />
       <Route path="index" component={Index}/>
-      <Route path="videos" component={Videos}/>
       <Route path="contact" component={Contact}/>
       <Route path="albums" component={Albums}/>
       <Route path="dates" component={Dates}/>

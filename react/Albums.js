@@ -1,31 +1,20 @@
 import React from 'react';
 import FlatButton from 'material-ui/FlatButton';
 var MediaQuery = require('react-responsive');
-
-var host = "31.220.58.84"
-
-const style = {
-  marginRight:5,
-  marginLeft: 5
-}
+var albums = require('./const/albums')
+var NOTICIA = albums.noticia
+var MOMENTO = albums.momento
+var URLS = require('./const/links')
+var MOMENTO_URL = URLS.mdf
+var NOTICIA_URL = URLS.not
 
 function getDisco(imageUrl, link){
   return(
-    <div style={{display: 'block', margin: "0 auto"}}>
-      <div style={{
-          display: 'block',
-          textAlign: 'center',
-          position: 'relative',
-          margin: '10 auto'
-        }}>
-        <img src={imageUrl} width={240} style={{border: 'solid white 1px', backgroundColor: 'black'}}/>
+    <div className="discoContainer">
+      <div className="discoItemContainer" >
+        <img src={imageUrl} width={240} className="discoTapa"/>
       </div>
-      <div style={{
-          display: 'block',
-          textAlign: 'center',
-          position: 'relative',
-          margin: '10 auto'
-      }}>
+      <div className="discoItemContainer" >
         <a href={link}>
         <FlatButton
           label="DESCARGAR DISCO"
@@ -65,123 +54,26 @@ function tablaDisco(disc, name){
   )
 }
 
-const NOTICIA = [
-  {
-    id: 1,
-    name: "Saber Elegir"
-  },
-  {
-    id: 2,
-    name: "Hombres Dragones"
-  },
-  {
-    id: 3,
-    name: "Libres de Destrucción"
-  },
-  {
-    id: 4,
-    name: "La cuenta perfecta"
-  },
-  {
-    id: 5,
-    name: "Seguro"
-  },
-  {
-    id: 6,
-    name: "Acorralados"
-  },
-  {
-    id: 7,
-    name: "Revoluciones"
-  },
-  {
-    id: 8,
-    name: "Jericó"
-  },
-  {
-    id: 9,
-    name: "Legión"
-  },
-  {
-    id: 10,
-    name: "Gorriónz de Mayo"
-  },
-]
 
-const MOMENTO = [
-  {
-    id: 1,
-    name: "Araña de ciudad"
-  },
-  {
-    id: 2,
-    name: "Arma letal"
-  },
-  {
-    id: 3,
-    name: "Mutación"
-  },
-  {
-    id: 4,
-    name: "Línea del Sol"
-  },
-  {
-    id: 5,
-    name: "Crayones masticados"
-  },
-  {
-    id: 6,
-    name: "Conquistarán"
-  },
-  {
-    id: 7,
-    name: "Instinto animal"
-  },
-  {
-    id: 8,
-    name: "Mahatma"
-  },
-  {
-    id: 9,
-    name: "Circo grotesco"
-  },
-  {
-    id: 10,
-    name: "Deus ex machina"
-  },
-
-  {
-    id: 11,
-    name: "Hubo"
-  },
-  {
-    id: 12,
-    name: "Ángeles de plástico"
-  },
-  {
-    id: 13,
-    name: "Noticia Oficial"
-  },
-]
 
 export default class Albums extends React.Component {
   render() {
     return(
-      <div style={{paddingBottom: 30}}>
+      <div id="discosTitleContainer">
         <MediaQuery query='(max-width: 768px)'>
-          <h4 style={{textAlign: 'center', color: 'white', marginTop: '10%', position:'relative', fontFamily: 'helvetica'}}>
+          <h4 className="discosTitle" id="discosTitleMin">
             Discos:
           </h4>
         </MediaQuery>
         <MediaQuery query='(min-width: 769px)'>
-          <h3 style={{textAlign: 'center', color: 'white', marginTop: '5%', position:'relative', fontFamily: 'helvetica'}}>
+          <h3 className="discosTitle" id="discosTitleMax">
             Discos:
           </h3>
         </MediaQuery>
-        <div style={{color: 'white', margin: "0 auto", width: "75%", marginTop: 30, marginBottom: 30, position:'relative'}}>
-          {getDisco("../images/momento/momento-cover.jpg", "http://"+host+":3001/download/sin-receta-momento-de-furia.zip")}
+        <div id="discosContainer">
+          {getDisco("../images/momento/momento-cover.jpg", MOMENTO_URL)}
           {tablaDisco(MOMENTO, "Momento de Furia")}
-          {getDisco("../images/momento/noticia-cover.jpg", "http://"+host+":3001/download/sin-receta-noticia-oficial.zip")}
+          {getDisco("../images/momento/noticia-cover.jpg", NOTICIA_URL)}
           {tablaDisco(NOTICIA, "Noticia Oficial")}
         </div>
       </div>
