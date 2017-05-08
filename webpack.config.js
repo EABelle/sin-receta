@@ -1,5 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
+var env = process.env.NODE_ENV || 'dev'
+var config = require('./web.config.js')[env];
 
 module.exports = {
   entry: './main.js',
@@ -20,7 +22,7 @@ module.exports = {
     historyApiFallback: true,
     contentBase: './',
     hot: true,
-    port: process.env.PORT || 8080,
+    port: config.port,
     host: "0.0.0.0"
   },
 };
