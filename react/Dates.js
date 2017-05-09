@@ -33,7 +33,7 @@ function tablaFechas(fechas){
   )
 }
 
-const FECHAS = [
+const FECHAS = [/*
   {
     fecha: "Sáb 29/4 - 21:00 hs",
     lugar: "Teatro Verdi - Av. Alte. Brown 726",
@@ -44,13 +44,20 @@ const FECHAS = [
       >
         <span className="dateLink"> IR AL EVENTO </span>
     </a>,
+  },*/
+  {
+    fecha: "Sáb 20/5",
+    lugar: "Kirie Music Club - Bolívar 813",
+    ciudad: "CABA",
+    detalles: "-",
   },
   {
     fecha: "Sáb 17/6",
     lugar: "Teatro Verdi - Av. Alte. Brown 726",
     ciudad: "CABA",
-    detalles: "-",
+    detalles: "Rock In Boca",
   },
+  /* //FECHAS FUTURAS CONFIRMADAS
   {
     fecha: "Sáb 12/8",
     lugar: "Teatro Verdi - Av. Alte. Brown 726",
@@ -68,7 +75,7 @@ const FECHAS = [
     lugar: "Teatro Verdi - Av. Alte. Brown 726",
     ciudad: "CABA",
     detalles: "-",
-  },
+  },*/
 
 ]
 
