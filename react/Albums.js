@@ -30,7 +30,7 @@ function getDisco(imageUrl, link){
 function tablaDisco(disc, name){
   return(
     <div>
-      <table className="table">
+      <table className="table" id="datesTable">
         <thead>
           <tr>
             <th>#</th>
@@ -61,14 +61,14 @@ export default class Albums extends React.Component {
     return(
       <div id="discosTitleContainer">
         <MediaQuery query='(max-width: 768px)'>
-          <h4 className="discosTitle" id="discosTitleMin">
+          <h5 className="discosTitle" id="discosTitleMin">
             Discos:
-          </h4>
+          </h5>
         </MediaQuery>
         <MediaQuery query='(min-width: 769px)'>
-          <h3 className="discosTitle" id="discosTitleMax">
+          <h4 className="discosTitle" id="discosTitleMax">
             Discos:
-          </h3>
+          </h4>
         </MediaQuery>
         <div id="discosContainer">
           {getDisco("../images/momento/momento-cover.jpg", MOMENTO_URL)}

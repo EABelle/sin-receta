@@ -84,14 +84,14 @@ export default class Albums extends React.Component {
     return(
       <div id="datesHead">
         <MediaQuery query='(max-width: 768px)'>
-          <h4 className="datesTitle" id="datesTitleMin">
+          <h5 className="datesTitle" id="datesTitleMin">
             Próximas Fechas:
-          </h4>
+          </h5>
         </MediaQuery>
         <MediaQuery query='(min-width: 769px)'>
-          <h3 className="datesTitle" id="datesTitleMax">
+          <h4 className="datesTitle" id="datesTitleMax">
             Próximas Fechas:
-          </h3>
+          </h4>
         </MediaQuery>
         <div id="datesTableHead">
           {tablaFechas(FECHAS)}

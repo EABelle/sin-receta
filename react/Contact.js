@@ -27,18 +27,24 @@ export default class Index extends React.Component {
     return(
       <div id="contactHead">
         <MediaQuery query='(max-width: 768px)'>
-          <h4 className="contactParagraph">
-            Sitios:
-          </h4>
+          <h5 className="contactParagraph" id="contactMin">
+            Contacto
+          </h5>
           {blocks(64)}
+          <h4 className="mailParagraph">
+            Mail:
+          </h4>
         </MediaQuery>
         <MediaQuery query='(min-width: 769px)'>
-          <h3 className="contactParagraph">
-            Sitios:
-          </h3>
+          <h4 className="contactParagraph" id="contactMax">
+            Contacto:
+          </h4>
           {blocks(120)}
+          <h5 className="mailParagraph">
+            Mail:
+          </h5>
         </MediaQuery>
-        <h5 className="contactParagraph" id="contactFoot">
+        <h5 className="mailUrl" id="contactFoot">
           sinrecetaoficial@gmail.com
         </h5>
       </div>
