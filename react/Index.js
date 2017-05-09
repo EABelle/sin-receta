@@ -55,7 +55,7 @@ export default class Index extends React.Component {
             </IconButton>
           </div>
           <div className="dialogItem">
-            <img src="../images/momento/MdF-logo.png" width={240}/>
+            <img src="../images/momento/momento-cover.jpg" width={240}/>
           </div>
           <div className="dialogItem">
             <a href={MDF_URL}>

@@ -23,13 +23,13 @@ export default class Banner extends React.Component {
             </div>
           </MediaQuery>
           <MediaQuery query='(max-width: 768px)'>
-            <img
-              onClick={()=>this.setState({drawerOpen: !this.state.drawerOpen})}
-              src="images/icon.png"
-              width="24"
-              alt=""
-              id="menuIcon"
-            />
+              <img
+                onClick={()=>this.setState({drawerOpen: !this.state.drawerOpen})}
+                src="images/icon.png"
+                width="20"
+                alt=""
+                id="menuIcon"
+              />
             <img src="images/logo.png" width="64" id="menuLogo"/>
           </MediaQuery>
 
@@ -37,10 +37,10 @@ export default class Banner extends React.Component {
 
             <ul className="res">
               <li><a href="/"><span className="glyphicon glyphicon-home" aria-hidden="true"> </span></a></li>
-              <li><Link to="albums" style={{fontFamily: 'Helvetica'}}>Discos</Link></li>
-              <li><a href="https://www.youtube.com/user/7sinreceta/videos" target="_blank" style={{fontFamily: 'Helvetica'}}>Videoclips</a></li>
-            <li><Link to="dates" style={{fontFamily: 'Helvetica'}}>Fechas</Link></li>
-              <li className="nav-line"><Link to="contact" style={{fontFamily: 'Helvetica'}}>Contacto</Link></li>
+              <li><Link to="albums" style={{fontFamily: 'geometos'}}>Discos</Link></li>
+              <li><a href="https://www.youtube.com/user/7sinreceta/videos" target="_blank" style={{fontFamily: 'geometos'}}>Videoclips</a></li>
+            <li><Link to="dates" style={{fontFamily: 'geometos'}}>Fechas</Link></li>
+              <li className="nav-line"><Link to="contact" style={{fontFamily: 'geometos'}}>Contacto</Link></li>
             </ul>
           </div>
           <div className="clearfix"> </div>
@@ -58,32 +58,32 @@ export default class Banner extends React.Component {
           <a href="/">
             <MenuItem
               onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})}
-              style={{color:'darkRed', fontWeight: 'bold', fontFamily: 'Helvetica',position: 'relative', display: 'block'}}
+              style={{color:'white', fontWeight: '', fontFamily: 'geometos',position: 'relative', display: 'block'}}
             >Home
             </MenuItem>
           </a>
           <Link to="albums">
             <MenuItem
-              style={{color:'darkRed', fontWeight: 'bold', fontFamily: 'Helvetica'}}
+              style={{color:'white', fontWeight: '', fontFamily: 'geometos'}}
               onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})}>
               Discos
             </MenuItem>
           </Link>
           <a href="https://www.youtube.com/user/7sinreceta/videos" target="_blank">
             <MenuItem
-              style={{color:'darkRed', fontWeight: 'bold', fontFamily: 'Helvetica'}}
+              style={{color:'white', fontWeight: '', fontFamily: 'geometos'}}
               onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})}>
               Videoclips
             </MenuItem>
           </a>
           <Link to="dates" >
-            <MenuItem style={{color:'darkRed', fontWeight: 'bold', fontFamily: 'Helvetica'}}
+            <MenuItem style={{color:'white', fontWeight: '', fontFamily: 'geometos'}}
               onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})} className="nav-line">
               Fechas
             </MenuItem>
           </Link>
           <Link to="contact" >
-            <MenuItem style={{color:'darkRed', fontWeight: 'bold', fontFamily: 'Helvetica'}}
+            <MenuItem style={{color:'white', fontWeight: '', fontFamily: 'geometos'}}
               onTouchTap={()=>this.setState({drawerOpen: !this.state.drawerOpen})} className="nav-line">
               Contacto
             </MenuItem>
