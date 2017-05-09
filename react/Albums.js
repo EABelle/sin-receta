@@ -1,5 +1,7 @@
 import React from 'react';
 import FlatButton from 'material-ui/FlatButton';
+import ActionGetApp from 'material-ui/svg-icons/action/get-app';
+import IconButton from 'material-ui/IconButton';
 var MediaQuery = require('react-responsive');
 var albums = require('./const/albums')
 var NOTICIA = albums.noticia
@@ -35,6 +37,7 @@ function tablaDisco(disc, name){
           <tr>
             <th>#</th>
             <th>Nombre</th>
+            <th style={{textAlign: 'center'}}>Descargar</th>
           </tr>
         </thead>
         <tbody>
@@ -44,6 +47,11 @@ function tablaDisco(disc, name){
                 <tr key={song.name}>
                   <th scope="row">{song.id}</th>
                   <td>{song.name}</td>
+                  <td style={{textAlign: 'center', padding: 0}}>
+                    <IconButton href={"http://"+URLS.host+":3001/download/"+song.url}>
+                      <ActionGetApp />
+                    </IconButton>
+                  </td>
                 </tr>
               )
             })

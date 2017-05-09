@@ -17,9 +17,8 @@ app.use(function(req, res, next) {
 
 app.use(express.static('../../public'));
 
-app.get('/download/:disc', function(req, res){
-
-  var file = __dirname + '/public/'+req.params.disc;
+function downloadFile(req, res, secondPath){
+  var file = __dirname + '/public/'+secondPath+req.params.fileParam;
 
   var filename = path.basename(file);
   var mimetype = mime.lookup(file);
@@ -29,6 +28,18 @@ app.get('/download/:disc', function(req, res){
 
   var filestream = fs.createReadStream(file);
   filestream.pipe(res);
+}
+
+app.get('/download/:fileParam', function(req, res){
+  downloadFile(req, res, '');
+});
+
+app.get('/download/momento/:fileParam', function(req, res){
+  downloadFile(req, res, 'momento/');
+});
+
+app.get('/download/noticia/:fileParam', function(req, res){
+  downloadFile(req, res, 'noticia/');
 });
 
 var httpServer = http.createServer(app);
