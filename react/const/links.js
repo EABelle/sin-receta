@@ -4,6 +4,7 @@ var notURL = "http://"+host+":3001/download/sin-receta-noticia-oficial.zip"
 var urls={
   mdf: mdfURL,
   not: notURL,
+  host: host,
 }
 
 module.exports = urls
