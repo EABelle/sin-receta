@@ -31,9 +31,12 @@ export default class Index extends React.Component {
             Contacto
           </h5>
           {blocks(64)}
-          <h4 className="mailParagraph">
+          <h5 className="mailParagraph" style={{fontSize: 20}}>
             Mail:
-          </h4>
+          </h5>
+          <h5 className="mailUrl" id="contactFoot" style={{fontSize: 20}}>
+            sinrecetaoficial@gmail.com
+          </h5>
         </MediaQuery>
         <MediaQuery query='(min-width: 769px)'>
           <h4 className="contactParagraph" id="contactMax">
@@ -43,10 +46,10 @@ export default class Index extends React.Component {
           <h5 className="mailParagraph">
             Mail:
           </h5>
+          <h5 className="mailUrl" id="contactFoot">
+            sinrecetaoficial@gmail.com
+          </h5>
         </MediaQuery>
-        <h5 className="mailUrl" id="contactFoot">
-          sinrecetaoficial@gmail.com
-        </h5>
       </div>
     )
   }
