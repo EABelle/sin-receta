@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node RESTServer.js & node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors",
-    "start-prod": "supervisor RESTServer.js & NODE_ENV=prod node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors -p"
+    "start-prod": "supervisor RESTServer.js & NODE_ENV=prod supervisor ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors -p"
   },
   "author": "",
   "license": "ISC",
